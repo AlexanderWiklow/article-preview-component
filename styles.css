@@ -12,13 +12,15 @@
 }
 
 html {
+    height: 100vh;
     /* background-color: black; */
     /* height: 100vh; */
 }
 
 body {
+    /* padding: 5rem; */
     width: 100%;
-    height: 100%;
+    height: 40rem;
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
@@ -28,6 +30,7 @@ body {
     justify-content: center;
     display: flex; */
     position: relative;
+    background-color: var(--Light-Grayish-Blue);
 
 }
 
@@ -36,11 +39,13 @@ body {
     position: absolute;
     /* width: 80%; */
     border: 4px solid black;
+    background-color: white;
     margin-top: 20rem;
+    margin-bottom: 10px;
     /* margin-top: 50%; */
     /* margin-left: 50%; */
     width: 80%;
-    height:  25rem;
+    height:  35rem;
     /* margin-top: 5rem; */
     /* height: auto; */
     /* background: black; */
@@ -48,17 +53,26 @@ body {
     /* top: 50%; */
     left: 50%;
     transform: translate(-50%,-50%);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.top-image-container img {
+    height: auto;
+    width: 20rem;
+
 }
 
 .top-image-container  {
     background-color: aquamarine;
     width: 100%;
     height: 40%;
+    overflow: hidden;
 }
 
 .text-container {
     width: 90%;
-    height: 11.5rem;
+    height: 19rem;
     border: 2px solid black;
     margin: 1rem;
 }
@@ -66,27 +80,34 @@ body {
 .title {
     border: 2px solid black;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    height: 2rem;
+    height: 4rem;
 }
 
 .paragraph-text {
     border: 2px solid black;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    height: 4rem;
+    height: 8rem;
 }
 
 .footer {
     border: 2px solid black;
-    height: 3rem;
+    height: 5rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     display: flex;
 }
 
 .footer-image {
+    background-image: url();
     border: 2px solid black;
     margin: 0.2rem;
     width: 3.5rem;
     height: 90%;
+}
+
+.footer-image img {
+    height: auto;
+    width: 3rem;
+    border-radius: 25px;
 }
 
 .footer-text-container {
@@ -96,8 +117,29 @@ body {
     height: 90%;
 }
 
-.name {
+.title h1 {
+    /* object-fit: contain; */
+    font-size: 0.9rem;
+}
+
+.paragraph-text p {
+    font-size: 0.97rem;
+}
+
+.text-info {
+    margin-top: 10px;
     border: 1px solid black;
+    /* font-size: 0.7rem;
+    font-weight: bolder; */
+}
+
+.name   {
+    font-size: 0.7rem;
+    font-weight: bolder;
+}
+
+.date {
+
 }
 
 .button-container {
@@ -107,4 +149,33 @@ body {
     height: 90%;
 }
 
+.share img {
+    margin: 1rem;
+    border-radius: 25px;
+}
+
+.share {
+    display: flex;
+    float: right;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        width: 40rem;
+        height: 20rem;
+        display: flex;
+        float: left;
+        margin-left: 3rem;
+        margin-right: 6rem;
+    }
+
+    .top-image-container {
+        height: auto;
+    }
+
+    .image img {
+        height: 20rem;
+        
+    }
+}
 
