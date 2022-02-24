@@ -38,7 +38,7 @@ body {
     /* padding: 10px; */
     position: absolute;
     /* width: 80%; */
-    border: 4px solid black;
+    /* border: 4px solid black; */
     background-color: white;
     margin-top: 20rem;
     margin-bottom: 10px;
@@ -55,6 +55,7 @@ body {
     transform: translate(-50%,-50%);
     border-radius: 25px;
     overflow: hidden;
+    min-width: 315px;
 }
 
 .top-image-container img {
@@ -73,32 +74,35 @@ body {
 .text-container {
     width: 90%;
     height: 19rem;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 1rem;
 }
 
 .title {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     height: 4rem;
 }
 
 .paragraph-text {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     height: 8rem;
 }
 
 .footer {
-    border: 2px solid black;
-    height: 5rem;
+    /* border: 2px solid black; */
+    padding-top: 2rem;
+    /* margin-bottom: 5rem; */
+    /* background-color: black; */
+    /* height: 5rem; */
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     display: flex;
 }
 
 .footer-image {
     background-image: url();
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0.2rem;
     width: 3.5rem;
     height: 90%;
@@ -111,7 +115,7 @@ body {
 }
 
 .footer-text-container {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0.2rem;
     width: 7rem;
     height: 90%;
@@ -128,7 +132,7 @@ body {
 
 .text-info {
     margin-top: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* font-size: 0.7rem;
     font-weight: bolder; */
 }
@@ -138,25 +142,94 @@ body {
     font-weight: bolder;
 }
 
-.date {
-
-}
-
 .button-container {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0.2rem;
     width: 3.5rem;
     height: 90%;
 }
 
-.share img {
+/* .share img {
     margin: 1rem;
     border-radius: 25px;
-}
+} */
 
 .share {
     display: flex;
     float: right;
+}
+
+.share-button {
+    margin-top: 1rem;
+}
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 20rem;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    color: rgb(252, 252, 252);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -140%;
+    /* left: 50%; */
+    height: 5rem;
+    margin-left: -265px;
+}
+
+/* Popup arrow */
+/* .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -14px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--Desaturated-Dark-Blue) transparent transparent transparent;
+} */
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.facebook-icon, .twitter-icon, .pinterest-icon, .share-icon {
+    width: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+.share-button {
+    margin-top: 1rem;
+}
+
+#myPopup {
+    color: var(--Grayish-Blue);
 }
 
 @media screen and (min-width: 375px) {
@@ -167,15 +240,97 @@ body {
         float: left;
         margin-left: 3rem;
         margin-right: 6rem;
+        overflow: visible;
+        /* position: relative; */
     }
 
     .top-image-container {
         height: auto;
+        border-radius: 25px 0 0 25px;
     }
 
     .image img {
         height: 20rem;
         
+    }
+
+    /* Popup container */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        color: rgb(252, 252, 252);
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -70px;
+    }
+    
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -14px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--Desaturated-Dark-Blue) transparent transparent transparent;
+    }
+    
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+    
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+    }
+
+    .facebook-icon, .twitter-icon, .pinterest-icon {
+        width: 1rem;
+        margin-left: 1rem;
+    }
+
+    .popup {
+        /* display: flex;
+        float: left; */
+    }
+
+    .popuptext {
+        /* margin-right: 1rem; */
+    }
+
+    .popup img {
+    /* margin-top: 1rem; */
+    }
+
+    .share-button {
+        margin-top: 1rem;
+    }
+
+    #myPopup {
+        color: var(--Grayish-Blue);
     }
 }
 
